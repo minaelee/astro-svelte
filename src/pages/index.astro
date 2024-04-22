@@ -1,33 +1,108 @@
 ---
 // Component Imports
-import Counter from '../components/Counter.svelte';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Intro from '../components/Intro.svelte';
+import TechsUsed from '../components/TechsUsed.svelte';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter client:visible>
-				<h1>Hello, Svelte!</h1>
-			</Counter>
-		</main>
-	</body>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width' />
+        <meta name='generator' content={Astro.generator} />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <style>
+            html,
+            body {
+                padding: 2rem;
+                a:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+						/* img {
+							height: 20em;
+							padding-bottom: 2em;
+						} */
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- <Counter client:visible>
+      </Counter> -->
+            <Intro>
+							<h1 class="text-3xl">Hi, I'm Minae!</h1>
+                <!-- <img
+                    src='hi.webp'
+                    alt="A cartoon image of a woman with dark hair in a long braid, next to a speech balloon containing the words 'Hi, I'm Minae!' and a hand-waving emoticon"
+                /> -->
+                <p>
+                    I spun up this page using the <a href='https://astro.build'
+                        >Astro.js</a
+                    > web framework.
+                </p>
+                <p>
+                    <a href='https://astro.build'>Astro.js</a> is a fast, flexible framework
+                    for content-driven websites.<br />You can deploy an Astro website
+                    with any host. I used <a href='https://netlify.com'>Netlify</a>.
+                </p>
+                <p class='mt-2'>
+                    You can use Astro with React, Vue, Svelte, and other front end
+                    frameworks.<br />
+                    You can use it as the 'head' for headless CMS sites too, which I did
+                    for my <a href='minae.vercel.com'>ButterCMS page</a>.
+                </p>
+                <p class='mt-2'></p>
+            </Intro>
+            <TechsUsed>
+                <div>
+                    <h2 class='text-2xl'>
+                        Complete list of technologies used to create this page:
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href='https://astro.build'>Astro.js</a>
+                        </li>
+                        <li>
+                            Official Astro <a
+                                href='https://github.com/withastro/astro/tree/main/examples/framework-svelte'
+                                >framework-svelte project template</a
+                            >
+                        </li>
+                        <li>
+                            Astro <a
+                                href='https://docs.astro.build/en/guides/integrations-guide/tailwind/'
+                                >TailwindCSS integration</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href='https://docs.astro.build/en/reference/cli-reference/'
+                                >Astro CLI</a
+                            >
+                        </li>
+                        <li>
+                            <a href='https://docs.npmjs.com/cli/'>npm/npx CLI</a>
+                        </li>
+                        <li>
+                            <a
+                                href='https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line'
+                                >git CLI</a>
+                        </li>
+                        <li><a href='https://github.com'>GitHub</a></li>
+                        <li><a href='https://netlify.com'>Netlify</a></li>
+                        <li>
+                            <a
+                                href='https://developer.mozilla.org/en-US/docs/Web/HTML'
+                                >HTML</a>
+                        </li>
+                        <li>
+                            <a
+                                href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+                                >JavaScript</a>
+                        </li>
+                    </ul>
+                </div>
+            </TechsUsed>
+        </main>
+    </body>
 </html>
